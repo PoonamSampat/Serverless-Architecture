@@ -11,7 +11,7 @@ public async static Task Run(string myQueueItem, TraceWriter log)
 
         Email from = new Email("test@example.com");
             string subject = "Hello World from the SendGrid CSharp Library!";
-            Email to = new Email("posampat@microsoft.com");
+            Email to = new Email("xyz@microsoft.com");
             Content content = new Content("text/plain", myQueueItem);
             Mail mail = new Mail(from, subject, to, content);
         dynamic response = await sg.client.mail.send.post(requestBody: mail.Get());
